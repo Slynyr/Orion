@@ -16,3 +16,6 @@ class Constants:
     """
 
     tempHomeAssistantURL = "https://www.google.com/?client=safari"
+
+    configPath = "/config/devices.json"
+    configDefault = "" #TEMP
