@@ -1,3 +1,5 @@
+import os 
+
 class Constants: 
     #ascii font x992
     logo = """
@@ -15,7 +17,7 @@ class Constants:
           ‘                                                                       ‘                                                
     """
 
-    tempHomeAssistantURL = "https://www.google.com/?client=safari"
+    tempHomeAssistantURL = "http://homeassistant.local:8123"
 
-    configPath = "/config/devices.json"
+    configPath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config/devices.json")
     configDefault = "" #TEMP
