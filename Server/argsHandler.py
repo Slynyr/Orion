@@ -9,6 +9,10 @@ class ArgsHandler:
         parser.add_argument("--groupName", type=str, default=None , help="")
         parser.add_argument("--addDeviceToGroup", action='store_true', help="")
         parser.add_argument("--deviceName", type=str, default=None , help="")
+        parser.add_argument("--entityID", type=str, default=None , help="")
         parser.add_argument("--removeDeviceFromGroup", action='store_true', help="")
-        
+        parser.add_argument("--addDevice", action='store_true', help="")
+        parser.add_argument("--removeDevice", action='store_true', help="")
+        parser.add_argument("--removeGroup", action='store_true', help="")
+
         return parser.parse_args()

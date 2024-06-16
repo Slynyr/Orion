@@ -133,10 +133,6 @@
             "entityID": "light.l_h_2"
         },
         {
-            "name": "Z-B",
-            "entityID": "light.z_b"
-        },
-        {
             "name": "Bed Room",
             "entityID": "light.bed_room"
         },
@@ -145,27 +141,19 @@
             "entityID": "light.basement_staircase"
         },
         {
-            "name": "Backyard",
-            "entityID": "light.backyard"
-        },
-        {
             "name": "L-H-1",
             "entityID": "light.l_h_1"
         },
         {
             "name": "Lines 3332",
             "entityID": "light.lines_3332"
+        },
+        {
+            "name": "test",
+            "entityID": "light.test"
         }
     ],
     "groups": [
-        {
-            "name": "TestGroup",
-            "members": []
-        },
-        {
-            "name": "first",
-            "members": []
-        },
         {
             "name": "Office",
             "members": [

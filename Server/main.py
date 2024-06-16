@@ -28,6 +28,12 @@ elif args.addDeviceToGroup:
     inputHandler.addDeviceToGroup()
 elif args.removeDeviceFromGroup:
     inputHandler.removeDeviceFromGroup()
+elif args.addDevice:
+    inputHandler.addDevice()
+elif args.removeDevice:
+    inputHandler.removeDevice()
+elif args.removeGroup: 
+    inputHandler.removeGroup()
 
 homeAssistant.pingHomeAssistant()
 restApp = Rest(configParser, homeAssistant)

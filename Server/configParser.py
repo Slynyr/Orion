@@ -30,7 +30,7 @@ class ConfigParser:
                     print(Fore.LIGHTGREEN_EX + "[Server] " + Fore.LIGHTMAGENTA_EX + "Config not found. Generating new config")
                     return data
         except Exception as e:
-            print(Fore.RED + "[CRITICAL] Something went wrong while loading config. If issue cannot be resolved, delete config located at /program/config/devices.json")
+            print(Fore.RED + "[ ] Something went wrong while loading config. If issue cannot be resolved, delete config located at /program/config/devices.json")
             if (self.args.debug):
                 print(e)
 
@@ -43,8 +43,14 @@ class ConfigParser:
             self.data['devices'].append(device)
             self.saveConfig()
 
-    def popEntity():
-        pass
+    def removeDevice(self, name):
+        self.data['devices'] = [device for device in self.data['devices'] if device["name"] != name]
+        self.saveConfig()
+
+    def removeGroup(self, groupName):
+        print("1")
+        self.data['groups'] = [group for group in self.data['groups'] if group["name"] != groupName]
+        self.saveConfig()
 
     def getAllDevices(self):
         devices = []

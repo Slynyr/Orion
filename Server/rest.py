@@ -1,11 +1,16 @@
 from flask import Flask
 from colorama import Fore
+import logging
 
 class Rest:
     def __init__(self, configParser, homeAssistant):
         self.configParser = configParser
         self.homeAssistant = homeAssistant
-        self.app = Flask(__name__)    
+        self.app = Flask(__name__)
+        
+        log = logging.getLogger("werkzeug")
+        #log.setLevel(logging.WARNING)
+
         self.generateDeviceEndpoints()
         self.generateGroupEndpoints()
         self.app.run(host="0.0.0.0", port=4586, debug=False)
@@ -26,17 +31,17 @@ class Rest:
     def addDeviceEndpoints(self, device):
         
         def triggerOn():
-            print(Fore.LIGHTGREEN_EX + f"{device[0]} was turned on")
+            print(Fore.LIGHTGREEN_EX + "[Server] " + Fore.LIGHTMAGENTA_EX + f"{device[0]} was turned on")
             self.homeAssistant.triggerDevice(device[1], "turn_on")
             return f"{device[0]} was triggered"
         
         def triggerOff():
-            print(Fore.LIGHTGREEN_EX + f"{device[0]} was turned off")
+            print(Fore.LIGHTGREEN_EX + "[Server] " + Fore.LIGHTMAGENTA_EX + f"{device[0]} was turned off")
             self.homeAssistant.triggerDevice(device[1], "turn_off")
             return f"{device[0]} was triggered"
         
         def triggerToggle():
-            print(Fore.LIGHTGREEN_EX + f"{device[0]} was toggled")
+            print(Fore.LIGHTGREEN_EX + "[Server] " + Fore.LIGHTMAGENTA_EX +f"{device[0]} was toggled")
             self.homeAssistant.triggerDevice(device[1], "toggle")
             return f"{device[0]} was triggered"
         
@@ -47,17 +52,17 @@ class Rest:
     def addGroupEndpoints(self, group):
         
         def triggerOn():
-            print(Fore.LIGHTGREEN_EX + f"{group} was turned on")
+            print(Fore.LIGHTGREEN_EX + "[Server] " + Fore.LIGHTMAGENTA_EX + f"{group} was turned on")
             self.homeAssistant.triggerGroup(group, "turn_on")
             return f"{group} was triggered"
         
         def triggerOff():
-            print(Fore.LIGHTGREEN_EX + f"{group} was turned off")
+            print(Fore.LIGHTGREEN_EX + "[Server] " + Fore.LIGHTMAGENTA_EX + f"{group} was turned off")
             self.homeAssistant.triggerGroup(group, "turn_off")
             return f"{group} was triggered"
         
         def triggerToggle():
-            print(Fore.LIGHTGREEN_EX + f"{group} was toggled")
+            print(Fore.LIGHTGREEN_EX + "[Server] " + Fore.LIGHTMAGENTA_EX + f"{group} was toggled")
             self.homeAssistant.triggerGroup(group, "toggle")
             return f"{group} was triggered"
         

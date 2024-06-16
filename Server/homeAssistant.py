@@ -65,10 +65,13 @@ class HomeAssistant:
         url = f"{Constants.HOME_ASSISTANT_URL}/api/services/light/{action}"
         payload = {"entity_id": entityID}
 
-        response = requests.post(url, headers=self.headers, json=payload)
+        try:
+            response = requests.post(url, headers=self.headers, json=payload)
 
-        if response.status_code not in [200, 201]:
-            print(Fore.RED + f"[ERROR] Failed to send {action} command to {entityID}. HTTP {response.status_code}")
+            if response.status_code not in [200, 201]:
+                print(Fore.RED + f"[ERROR] Failed to send {action} command to {entityID}. HTTP {response.status_code}")
+        except:
+            print(Fore.RED + f"[ERROR] Failed to send {action} command to {entityID}")
 
     def triggerGroup(self, group, action):
         if action not in ["turn_on", "turn_off", "toggle"]:
