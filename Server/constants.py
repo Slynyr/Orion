@@ -17,7 +17,8 @@ class Constants:
           ‘                                                                       ‘                                                
     """
 
-    tempHomeAssistantURL = "http://homeassistant.local:8123"
+    HOME_ASSISTANT_URL = "http://homeassistant.local:8123"
 
     configPath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config/devices.json")
     configDefault = "" #TEMP
+    API_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIzZTIyMjhlZjkzYmQ0ZjhjYjdkYTU4NmMwZDhlYThlYyIsImlhdCI6MTcxODQ5NjM4MywiZXhwIjoyMDMzODU2MzgzfQ.NhK4azColUaqrU7rLNDIyUyjUYFbQzXqzjjtqa8sHbk"

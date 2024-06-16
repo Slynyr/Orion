@@ -1,1 +1,183 @@
-""
+{
+    "devices": [
+        {
+            "name": "L3",
+            "entityID": "light.l3"
+        },
+        {
+            "name": "Bathroom Downstairs 1",
+            "entityID": "light.bathroom_downstairs_1"
+        },
+        {
+            "name": "Bathroom Downstairs 2",
+            "entityID": "light.bathroom_downstairs_2"
+        },
+        {
+            "name": "Hue Play 2",
+            "entityID": "light.hue_play_2"
+        },
+        {
+            "name": "Hue white lamp 4",
+            "entityID": "light.hue_white_lamp_4"
+        },
+        {
+            "name": "Office Light",
+            "entityID": "light.bathroom_2_lamp_1"
+        },
+        {
+            "name": "Bathroom - Children - L1",
+            "entityID": "light.bathroom_children_l1"
+        },
+        {
+            "name": "Front Door Light ",
+            "entityID": "light.front_door_light"
+        },
+        {
+            "name": "L-1",
+            "entityID": "light.l_1"
+        },
+        {
+            "name": "Hue white lamp 1",
+            "entityID": "light.hue_white_lamp_1"
+        },
+        {
+            "name": "Bathroom 2  - Light 5",
+            "entityID": "light.bathroom_2_light_5"
+        },
+        {
+            "name": "Hue white lamp 3",
+            "entityID": "light.hue_white_lamp_3"
+        },
+        {
+            "name": "Bathroom - Children - L3 ",
+            "entityID": "light.bathroom_children_l3"
+        },
+        {
+            "name": "Hallway D-K-2",
+            "entityID": "light.hallway_d_k_2"
+        },
+        {
+            "name": "Bathroom 2 - Lamp 3",
+            "entityID": "light.bathroom_2_lamp_3"
+        },
+        {
+            "name": "L2",
+            "entityID": "light.l2"
+        },
+        {
+            "name": "Bathroom 2 - Lamp 2",
+            "entityID": "light.bathroom_2_lamp_2"
+        },
+        {
+            "name": "L-2",
+            "entityID": "light.l_2"
+        },
+        {
+            "name": "Basement stairs light",
+            "entityID": "light.basement_stairs_light"
+        },
+        {
+            "name": "L4",
+            "entityID": "light.l4"
+        },
+        {
+            "name": "L1",
+            "entityID": "light.l1"
+        },
+        {
+            "name": "Bathroom - Children - L2",
+            "entityID": "light.bathroom_children_l2"
+        },
+        {
+            "name": "Bathroom 2 - Light 6",
+            "entityID": "light.bathroom_2_light_6"
+        },
+        {
+            "name": "Hallway D-K-1",
+            "entityID": "light.hallway_d_k_1"
+        },
+        {
+            "name": "Bathroom 2 - Lamp 4",
+            "entityID": "light.bathroom_2_lamp_4"
+        },
+        {
+            "name": "Bathroom - Children - L4",
+            "entityID": "light.bathroom_children_l4"
+        },
+        {
+            "name": "Hue Play 1",
+            "entityID": "light.hue_play_1"
+        },
+        {
+            "name": "Z-A",
+            "entityID": "light.z_a"
+        },
+        {
+            "name": "Garage",
+            "entityID": "light.garage"
+        },
+        {
+            "name": "Bathroom 2",
+            "entityID": "light.bathroom_2"
+        },
+        {
+            "name": "Toilet-L1",
+            "entityID": "light.toilet_l1"
+        },
+        {
+            "name": "Bathroom - Children",
+            "entityID": "light.bathroom_children"
+        },
+        {
+            "name": "L-H-2",
+            "entityID": "light.l_h_2"
+        },
+        {
+            "name": "Z-B",
+            "entityID": "light.z_b"
+        },
+        {
+            "name": "Bed Room",
+            "entityID": "light.bed_room"
+        },
+        {
+            "name": "Basement Staircase",
+            "entityID": "light.basement_staircase"
+        },
+        {
+            "name": "Backyard",
+            "entityID": "light.backyard"
+        },
+        {
+            "name": "L-H-1",
+            "entityID": "light.l_h_1"
+        },
+        {
+            "name": "Lines 3332",
+            "entityID": "light.lines_3332"
+        }
+    ],
+    "groups": [
+        {
+            "name": "TestGroup",
+            "members": []
+        },
+        {
+            "name": "first",
+            "members": []
+        },
+        {
+            "name": "Office",
+            "members": [
+                {
+                    "name": "Office Light",
+                    "entityID": "light.bathroom_2_lamp_1"
+                },
+                {
+                    "name": "Lines 3332",
+                    "entityID": "light.lines_3332"
+                }
+            ]
+        }
+    ]
+}
