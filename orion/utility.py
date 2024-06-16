@@ -1,4 +1,4 @@
-from constants import Constants
+from .constants import Constants
 import os
 from colorama import Fore
 
@@ -10,7 +10,7 @@ class Utility:
         os.system('cls' if os.name == 'nt' else 'clear')
 
     def printBar(self):
-        print(Fore.LIGHTMAGENTA_EX + "="*self.size.columns)
+        print(Fore.LIGHTMAGENTA_EX + "─"*self.size.columns)
 
     def printLogo(self):
         if (self.size.columns >= 138):

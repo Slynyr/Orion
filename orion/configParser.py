@@ -1,4 +1,4 @@
-from constants import Constants
+from .constants import Constants
 from colorama import Fore
 
 import json
@@ -7,8 +7,8 @@ import os
 
 class ConfigParser:
     def __init__(self, args) -> None:
-        self.data = self.loadConfig()
         self.args = args
+        self.data = self.loadConfig()
 
     def ensureDirExists(self):
         directory = os.path.dirname(Constants.configPath)
@@ -21,13 +21,14 @@ class ConfigParser:
             if os.path.exists(Constants.configPath):
                 with open(Constants.configPath, "r") as file: 
                     data = json.load(file)
-                    print(Fore.LIGHTGREEN_EX + "[Server] " + Fore.LIGHTMAGENTA_EX + "successfully loaded config")
+                    if not (self.args.creategroup or self.args.removeGroup or self.args.addDeviceToGroup or self.args.removeDeviceFromGroup or self.args.addDevice or self.args.removeDevice or self.args.listDevices):
+                        print(Fore.MAGENTA+ "[Orion] " + Fore.LIGHTMAGENTA_EX + "successfully loaded config")
                     return data
             else:
                 data = {"devices": [], "groups": []}
                 with open(Constants.configPath, "w") as file: 
                     json.dump(data, file, indent=4)
-                    print(Fore.LIGHTGREEN_EX + "[Server] " + Fore.LIGHTMAGENTA_EX + "Config not found. Generating new config")
+                    print(Fore.MAGENTA+ "[Orion] " + Fore.LIGHTMAGENTA_EX + "Config not found. Generating new config")
                     return data
         except Exception as e:
             print(Fore.RED + "[ ] Something went wrong while loading config. If issue cannot be resolved, delete config located at /program/config/devices.json")
@@ -68,9 +69,7 @@ class ConfigParser:
 
     # GROUPS 
     def createActionGroup(self, name):
-        print("attempting")
         if not any(group for group in self.data['groups'] if group['name'] == name): # making sure device is not already added
-            print("I tried")
             groupJson = {"name": f"{name}", "members": []}
             self.data['groups'].append(groupJson)
             self.saveConfig() 

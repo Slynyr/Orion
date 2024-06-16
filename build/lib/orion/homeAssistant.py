@@ -1,4 +1,4 @@
-from constants import Constants
+from .constants import Constants
 from colorama import Fore
 import requests
 
@@ -43,8 +43,6 @@ class HomeAssistant:
                 deviceCount += 1
 
         print("\r" + Fore.LIGHTGREEN_EX + "[Orion] " + Fore.LIGHTMAGENTA_EX + f"{deviceCount} have been found and adopted                       ")
-
-        print(self.configParser.getAllDevices())
 
     def getDevices(self):
         url = f"{Constants.HOME_ASSISTANT_URL}/api/states"
