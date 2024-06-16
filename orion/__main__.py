@@ -11,9 +11,10 @@ def mainEntryPoint():
     utility = Utility()
 
     #Drawing CLI splash screen
-    utility.clearScreen()
-    utility.printLogo()
-    utility.printBar()
+    if not (args.creategroup or args.removeGroup or args.addDeviceToGroup or args.removeDeviceFromGroup or args.addDevice or args.removeDevice or args.listDevices):
+        utility.clearScreen()
+        utility.printLogo()
+        utility.printBar()
 
     #TODO ADD DEBUG PREFIX
     configParser = ConfigParser(args)

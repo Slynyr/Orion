@@ -18,7 +18,7 @@ class HomeAssistant:
             response = requests.get(Constants.HOME_ASSISTANT_URL)
 
             if (response.status_code == 200):
-                print("\r" + Fore.LIGHTGREEN_EX + "[Server] " + Fore.LIGHTMAGENTA_EX + "Home Assistant instance found on local network")
+                print("\r" + Fore.MAGENTA + "[Orion] " + Fore.LIGHTMAGENTA_EX + "Home Assistant instance found on local network")
             else:
                 print("\r" + Fore.LIGHTYELLOW_EX + f"[WARN] " + Fore.LIGHTMAGENTA_EX + "Home Assistant responded with code {response.status_code}. Some functionality may not be available")
         except Exception as e: 
@@ -42,7 +42,7 @@ class HomeAssistant:
                 self.configParser.addDevice(name, entityID)
                 deviceCount += 1
 
-        print("\r" + Fore.LIGHTGREEN_EX + "[Orion] " + Fore.LIGHTMAGENTA_EX + f"{deviceCount} have been found and adopted                       ")
+        print("\r" + Fore.MAGENTA + "[Orion] " + Fore.LIGHTMAGENTA_EX + f"{deviceCount} have been found and adopted                       ")
 
     def getDevices(self):
         url = f"{Constants.HOME_ASSISTANT_URL}/api/states"

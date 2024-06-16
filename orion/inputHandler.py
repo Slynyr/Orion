@@ -60,5 +60,6 @@ class InputHandler:
 
             for member in members:
                 print(Fore.MAGENTA + "     Name: " + Fore.LIGHTMAGENTA_EX + member[0] + Fore.MAGENTA + " Entity ID: " + Fore.LIGHTMAGENTA_EX + member[1])
+        quit()
             
             
