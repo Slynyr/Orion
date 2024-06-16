@@ -1,4 +1,4 @@
-from constants import Constants
+from .constants import Constants
 from colorama import Fore
 
 import json

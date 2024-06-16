@@ -14,5 +14,7 @@ class ArgsHandler:
         parser.add_argument("--addDevice", action='store_true', help="")
         parser.add_argument("--removeDevice", action='store_true', help="")
         parser.add_argument("--removeGroup", action='store_true', help="")
+        parser.add_argument("--showCWD", action='store_true', help="")
+        parser.add_argument("--listDevices", action='store_true', help="")
 
         return parser.parse_args()
