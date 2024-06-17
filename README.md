@@ -1,5 +1,5 @@
 # Orion
-Orion is a xxx
+Orion is a server designed to sit between home assistant and IOT devices on your network. It allows for home assistant entities to be easily mapped to REST endpoints for ease of use. Orion also allows for the creation of trigger groups which makes the management of custom IOT devies really convenient when it comes to reconfigering how they interact with your home. 
 
 ## Getting Started
 ### Installation
